@@ -4,9 +4,9 @@ A template for managing database changes with Liquibase. This repository provide
 
 ### Prerequisites
 
--   [Liquibase](https://formulae.brew.sh/formula/liquibase) for managing database changes
--   [DBeaver](https://dbeaver.io/) for database visualization and management (optional)
--   Access to a relational database (e.g., PostgreSQL)
+-   [Liquibase](https://formulae.brew.sh/formula/liquibase) for managing database changes.
+-   [DBeaver](https://dbeaver.io/) for database visualization and management (optional).
+-   Access to a relational database (e.g., PostgreSQL).
 
 ### Setup
 
