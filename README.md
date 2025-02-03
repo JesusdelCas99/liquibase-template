@@ -4,7 +4,7 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 
 ### Prerequisites
 
-- [Liquibase](https://formulae.brew.sh/formula/liquibase) for managing database changes
+- [Liquibase CLI](https://formulae.brew.sh/formula/liquibase) for managing database changes
 - [DBeaver](https://dbeaver.io/) for database visualization and management
 - Access to a relational database (e.g., PostgreSQL)
 
@@ -14,7 +14,7 @@ To get started, clone the repository and configure Liquibase for your database:
 
 1. Clone the repository:
 
-    ```bash 
+    ```bash
     git clone https://github.com/JesusdelCas99/liquibase-template.git
     ```
 
@@ -26,12 +26,12 @@ To get started, clone the repository and configure Liquibase for your database:
     - **username**: Database username.
     - **password**: Database password.
 
-### Usage
+### Workflow
 
-The basic Liquibase workflow includes the following actions to manage and apply changes to your database schema:
+The basic Liquibase workflow consists of the following actions to manage and apply changes to the database schema:
 
 - Validate the Liquibase changelog for errors:
-    
+
     ```bash
     liquibase validate
     ```
@@ -43,7 +43,7 @@ The basic Liquibase workflow includes the following actions to manage and apply 
     ```
 
 - Report database schema synchronization:
-    
+
     ```bash
     liquibase status
     ```
@@ -60,8 +60,8 @@ The basic Liquibase workflow includes the following actions to manage and apply 
     liquibase rollbackToDate "2025-01-31 15:03:40.125"
     ```
 
-- Rollback to a specific tag:
-    
+- Rollback to a specific tag (useful for releases):
+
     ```bash
     liquibase rollback 'v0.1'
     ```
