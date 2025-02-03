@@ -10,7 +10,7 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 
 ### Setup
 
-Follow these steps to set up the project and configure Liquibase for your database:
+To get started, clone the repository and configure Liquibase for your database:
 
 1.  Clone the repository:
 
@@ -27,8 +27,6 @@ Follow these steps to set up the project and configure Liquibase for your databa
     -   **password**: Database password.
 
 ### Workflow
-
-This section outlines the standard Liquibase workflow for managing database schema changes.
 
 #### Core Commands:
 
