@@ -5,7 +5,7 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 ### Prerequisites
 
 -   [Liquibase CLI](https://formulae.brew.sh/formula/liquibase)
--   [DBeaver](https://dbeaver.io/) (Optional)
+-   [DBeaver](https://dbeaver.io/) for database visualization and management (optional)
 -   Access to a relational database (e.g., PostgreSQL)
 
 ### Setup
