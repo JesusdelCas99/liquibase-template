@@ -72,7 +72,7 @@ To get started, clone the repository and configure Liquibase for your database:
     liquibase rollbackCount 1
     ```
 
-Rollback operations can be irreversible and may result in data loss. Exercise caution and ensure proper backups are in place before executing rollback commands.
+Note: Rollback operations can be irreversible and may result in data loss. Exercise caution and ensure proper backups are in place before executing rollback commands.
 
 ### License
 
