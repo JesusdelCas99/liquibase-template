@@ -9,12 +9,14 @@
     <changeSet id="0" author="Barron">
         <tagDatabase tag="v0.0"/>
     </changeSet>
+    
     <include file="liquibase/changelog/changeset-1.xml" />
     <include file="liquibase/changelog/changeset-2.xml" />
 
     <changeSet id="3" author="Barron">
         <tagDatabase tag="v0.1"/>
     </changeSet>
+
     <include file="liquibase/changelog/changeset-3.xml" />
-    
+
 </databaseChangeLog>
