@@ -72,7 +72,7 @@ The basic Liquibase workflow includes the following actions to manage and apply 
     liquibase rollbackCount 1
     ```
 
-    Note: Rollback is not reversible and may result in data loss.
+    Note: Rollback action is not reversible and may result in data loss.
 
 ### License
 
