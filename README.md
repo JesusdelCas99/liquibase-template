@@ -1,10 +1,10 @@
 # liquibase-template
 
-A template for managing database changes with [Liquibase](https://docs.liquibase.com/home.html). This repository provides the basic configuration and workflow for integrating Liquibase into your project.
+A template for managing database changes with Liquibase. This repository provides the basic configuration and workflow for integrating Liquibase into your project.
 
 ### Prerequisites
 
--   [Liquibase CLI](https://formulae.brew.sh/formula/liquibase)
+-   [Liquibase](https://formulae.brew.sh/formula/liquibase) for managing database changes
 -   [DBeaver](https://dbeaver.io/) for database visualization and management (optional)
 -   Access to a relational database (e.g., PostgreSQL)
 
