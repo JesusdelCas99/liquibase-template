@@ -28,47 +28,49 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 
 Basic Liquibase workflow involves these commands:
 
--   **Validate changelog:**
+-   Validate changelog:
     ```bash
     liquibase validate
     ```
 
--   **Apply new changesets:**
+-   Apply new changesets:
     ```bash
     liquibase update
     ```
 
--   **Check database status:**
+-   Check database status:
     ```bash
     liquibase status
     ```
 
--   **Mark changesets as applied (no execution):** Use cautiously, mainly for existing databases.
+-   Mark changesets as applied (no execution): 
     ```bash
     liquibase changelog-sync
     ```
+    Use cautiously, mainly for existing databases.
 
--   **Tag a database state:** Useful for releases or rollbacks.
+-   Tag a database state:
     ```bash
     liquibase tag 'v0.2'
     ```
-
--   **Rollback to a specific date:**
+    Useful for releases or rollbacks.
+    
+-   Rollback to a specific date:
     ```bash
     liquibase rollbackToDate "2025-01-31 15:03:40.125"
     ```
 
--   **Rollback to a specific tag:**
+-   Rollback to a specific tag:
     ```bash
     liquibase rollback 'v0.2'
     ```
 
--   **Rollback by changeset count:**
+-   Rollback by changeset count:
     ```bash
     liquibase rollbackCount 1
     ```
 
-    **Note:** Rollbacks can be irreversible and may cause data loss.
+    Note: Rollbacks can be irreversible and may cause data loss.
 
 ### License
 
