@@ -28,7 +28,7 @@ To get started, clone the repository and configure Liquibase for your database:
 
 ### Workflow
 
-Basic Liquibase workflow involves these commands:
+Basic Liquibase workflow involves the following commands:
 
 -   Validate changelog:
     ```bash
@@ -45,17 +45,15 @@ Basic Liquibase workflow involves these commands:
     liquibase status
     ```
 
--   Mark changesets as applied (no execution): 
+-   Mark changesets as applied (no execution). Use cautiously, mainly for existing databases: 
     ```bash
     liquibase changelog-sync
     ```
-    Use cautiously, mainly for existing databases.
 
--   Tag a database state:
+-   Tag a database state. Useful for releases or rollbacks:
     ```bash
     liquibase tag 'v0.2'
     ```
-    Useful for releases or rollbacks.
     
 -   Rollback to a specific date:
     ```bash
