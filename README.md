@@ -57,8 +57,6 @@ To get started, clone the repository and configure Liquibase for your database:
 
 #### Rollback Operations:
 
-Rollback operations can be irreversible and may result in data loss. Exercise caution and ensure proper backups are in place before executing rollback commands.
-
 -   **Rollback to date**: Revert the database to a specific point in time:
     ```bash
     liquibase rollbackToDate "2025-01-31 15:03:40.125"
@@ -73,6 +71,8 @@ Rollback operations can be irreversible and may result in data loss. Exercise ca
     ```bash
     liquibase rollbackCount 1
     ```
+
+Rollback operations can be irreversible and may result in data loss. Exercise caution and ensure proper backups are in place before executing rollback commands.
 
 ### License
 
