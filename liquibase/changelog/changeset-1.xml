@@ -6,7 +6,7 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="Barron">
+    <changeSet id="1" author="Barron" labels="v1">
         <comment>example comment</comment>
         <createTable tableName="person">
             <column name="id" type="int" autoIncrement="true">
@@ -21,7 +21,6 @@
         </createTable>
         <rollback>
             <dropTable tableName="person"/>
-        </rollback>
+        </rollback>   
     </changeSet>
-
 </databaseChangeLog>
