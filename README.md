@@ -28,8 +28,6 @@ To get started, clone the repository and configure Liquibase for your database:
 
 ### Workflow
 
-Basic Liquibase workflow involves the following commands:
-
 -   Validate changelog:
     ```bash
     liquibase validate
