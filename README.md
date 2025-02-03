@@ -28,6 +28,10 @@ To get started, clone the repository and configure Liquibase for your database:
 
 ### Workflow
 
+This section outlines the standard Liquibase workflow for managing database schema changes.
+
+#### Core Commands:
+
 -   Validate changelog:
     ```bash
     liquibase validate
