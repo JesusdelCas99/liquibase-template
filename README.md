@@ -1,6 +1,6 @@
 # liquibase-template
 
-A template for managing database changes with Liquibase. This repository provides the basic configuration and workflow for integrating Liquibase into your project.
+A template for managing database changes with [Liquibase](https://docs.liquibase.com/home.html). This repository provides the basic configuration and workflow for integrating Liquibase into your project.
 
 ### Prerequisites
 
