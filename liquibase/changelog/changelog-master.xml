@@ -17,6 +17,6 @@
         <tagDatabase tag="v0.1"/>
     </changeSet>
 
-    <include file="liquibase/changelog/changeset-3.xml" />
+    <include file="liquibase/changelog/changeset-4.xml" />
 
 </databaseChangeLog>
