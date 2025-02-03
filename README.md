@@ -10,7 +10,7 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 
 ### Setup
 
-To get started, clone the repository and configure Liquibase for your database:
+Follow these steps to set up the project and configure Liquibase for your database:
 
 1.  Clone the repository:
 
@@ -32,47 +32,49 @@ This section outlines the standard Liquibase workflow for managing database sche
 
 #### Core Commands:
 
--   Validate changelog:
+-   **Validate changelog**: Verify the syntax and structure of your changelog file:
     ```bash
     liquibase validate
     ```
 
--   Apply new changesets:
+-   **Apply new changesets**: Deploy pending changesets to the target database:
     ```bash
     liquibase update
     ```
 
--   Check database status:
+-   **Check database status**: Review the deployment status of changesets:
     ```bash
     liquibase status
     ```
 
--   Mark changesets as applied (no execution). Use cautiously, mainly for existing databases: 
+-   **Synchronize changelog**: Mark changesets as applied without executing them. 
     ```bash
     liquibase changelog-sync
     ```
 
--   Tag a database state. Useful for releases or rollbacks:
+-   **Tag database state**: Create a snapshot of the database schema (useful for releases or rollbacks):
     ```bash
     liquibase tag 'v0.2'
     ```
-    
--   Rollback to a specific date:
+
+#### Rollback Operations:
+
+Rollback operations can be irreversible and may result in data loss. Exercise caution and ensure proper backups are in place before executing rollback commands.
+
+-   **Rollback to date**: Revert the database to a specific point in time:
     ```bash
     liquibase rollbackToDate "2025-01-31 15:03:40.125"
     ```
 
--   Rollback to a specific tag:
+-   **Rollback to tag**: Revert the database to a previously tagged state:
     ```bash
     liquibase rollback 'v0.2'
     ```
 
--   Rollback by changeset count:
+-   **Rollback by count**: Revert a specified number of changesets:
     ```bash
     liquibase rollbackCount 1
     ```
-
-    Note: Rollbacks can be irreversible and may cause data loss.
 
 ### License
 
