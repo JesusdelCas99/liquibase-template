@@ -10,6 +10,8 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 
 ### Setup
 
+To get started, clone the repository and configure Liquibase for your database:
+
 1.  Clone the repository:
 
     ```bash
