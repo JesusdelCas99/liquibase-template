@@ -4,75 +4,71 @@ A template for managing database changes with [Liquibase](https://docs.liquibase
 
 ### Prerequisites
 
-- [Liquibase CLI](https://formulae.brew.sh/formula/liquibase) for managing database changes
-- [DBeaver](https://dbeaver.io/) for database visualization and management
-- Access to a relational database (e.g., PostgreSQL)
+-   [Liquibase CLI](https://formulae.brew.sh/formula/liquibase)
+-   [DBeaver](https://dbeaver.io/) (Optional)
+-   Access to a relational database (e.g., PostgreSQL)
 
 ### Setup
 
-To get started, clone the repository and configure Liquibase for your database:
-
-1. Clone the repository:
+1.  Clone the repository:
 
     ```bash
     git clone https://github.com/JesusdelCas99/liquibase-template.git
     ```
 
-2. Update `liquibase.properties` with your database details:
-    - **changeLogFile**: Path to the changelog file (e.g., `changelog-master.xml`).
-    - **classpath**: Path to the JDBC driver (e.g., `postgresql-42.7.5.jar`).
-    - **url**: Database connection URL (e.g., `jdbc:postgresql://localhost:5432/your_database`).
-    - **driver**: JDBC driver class (e.g., `org.postgresql.Driver`).
-    - **username**: Database username.
-    - **password**: Database password.
+2.  Update `liquibase.properties` with your database details:
+    -   **changeLogFile**: Path to changelog (e.g., `changelog-master.xml`).
+    -   **classpath**: Path to JDBC driver (e.g., `postgresql-42.7.5.jar`).
+    -   **url**: Database URL (e.g., `jdbc:postgresql://localhost:5432/your_database`).
+    -   **driver**: JDBC driver class (e.g., `org.postgresql.Driver`).
+    -   **username**: Database username.
+    -   **password**: Database password.
 
 ### Workflow
 
-The basic Liquibase workflow consists of the following actions to manage and apply changes to the database schema:
+Basic Liquibase workflow involves these commands:
 
-- Validate the Liquibase changelog for errors:
-
+-   **Validate changelog:**
     ```bash
     liquibase validate
     ```
 
-- Apply unregistered changesets from the changelog to the target database and register them in the `databasechangelog` table (created if absent):
-
+-   **Apply new changesets:**
     ```bash
     liquibase update
     ```
 
-- Report database schema synchronization:
-
+-   **Check database status:**
     ```bash
     liquibase status
     ```
 
-- Register changesets as applied (no execution):
-
+-   **Mark changesets as applied (no execution):** Use cautiously, mainly for existing databases.
     ```bash
     liquibase changelog-sync
     ```
 
-- Rollback to a specific date:
+-   **Tag a database state:** Useful for releases or rollbacks.
+    ```bash
+    liquibase tag 'v0.2'
+    ```
 
+-   **Rollback to a specific date:**
     ```bash
     liquibase rollbackToDate "2025-01-31 15:03:40.125"
     ```
 
-- Rollback to a specific tag (useful for releases):
-
+-   **Rollback to a specific tag:**
     ```bash
-    liquibase rollback 'v0.1'
+    liquibase rollback 'v0.2'
     ```
 
-- Rollback by count of changesets:
-
+-   **Rollback by changeset count:**
     ```bash
     liquibase rollbackCount 1
     ```
 
-    Note: Rollback action is not reversible and may result in data loss.
+    **Note:** Rollbacks can be irreversible and may cause data loss.
 
 ### License
 
